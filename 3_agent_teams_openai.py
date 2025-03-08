@@ -25,6 +25,7 @@ finance_agent = Agent(
     markdown=True,
 )
 
+
 agent_team = Agent(
     model=Groq(id="llama-3.3-70b-versatile"),
     team=[web_agent, finance_agent],
@@ -34,3 +35,5 @@ agent_team = Agent(
 )
 
 agent_team.print_response("Summarize analyst recommendations and share the latest news for NVDA", stream=True)
+
+
